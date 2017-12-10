@@ -1,0 +1,63 @@
+.fc-pinned-message-container {
+  border-radius: .25em;
+  width: 45em;
+  max-width: 80%;
+  background-color: white;
+  padding: 1.15em 1.5em 1.5em 1.5em;
+  line-height: 1.6;
+}
+.fc-pinned-message {
+}
+.fc-pinned-header {
+  font-size: 1.6em;
+  font-weight: 500;
+}
+.fc-pinned-text {
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+.fc-native-message-container {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.fc-native-message {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.fc-native-header {
+  line-height: 1.6;
+  font-size: 1.6em;
+  font-weight: 300;
+}
+.fc-native-text {
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+.fc-dialog-message {
+}
+.fc-dialog-header {
+  line-height: 1.6;
+  font-size: 1.6em;
+  font-weight: 300;
+}
+.fc-dialog-text {
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+.fc-actions {
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
+.fc-link-parent {
+  display: inline;
+}
+.fc-link {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-right: 1.5em;
+}
+.fc-close {
+}
