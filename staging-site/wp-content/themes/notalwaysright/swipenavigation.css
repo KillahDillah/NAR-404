@@ -1,0 +1,70 @@
+#main_announce .swipenavigation {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+#main_announce .swipenavigation.has-scroll .next,  #main_announce .swipenavigation.has-scroll .back { display: block; }
+
+#main_announce .swipenavigation.has-scroll ul {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#main_announce .swipenavigation .next,  #main_announce .swipenavigation .back {
+  position: absolute;
+  display: none;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  z-index: 2;
+  top: 0;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.5s ease-out;
+  background-color: #FFE500;
+}
+
+#main_announce .swipenavigation .next:hover:not(.hover-disabled),  #main_announce .swipenavigation .back:hover:not(.hover-disabled) {
+  transition: background-color 0s;
+  background-color: #fff;
+}
+
+#main_announce .swipenavigation .next.hover-disabled.touch,  #main_announce .swipenavigation .back.hover-disabled.touch { background-color: #998900; }
+
+#main_announce .swipenavigation .next.is-hidden,  #main_announce .swipenavigation .back.is-hidden { display: none; }
+
+#main_announce .swipenavigation .next { right: 0; }
+
+#main_announce .swipenavigation .back { left: 0; }
+
+#main_announce .swipenavigation ul {
+  width: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  letter-spacing: -1em;
+  word-spacing: -1em;
+  text-align: center;
+}
+
+/* 9/19/16 */
+#main_announce .swipenavigation ul li {
+  display: inline-block;
+  padding: 10px 0px 10px 0px;
+  letter-spacing: normal;
+  word-spacing: normal;
+  margin: 0 10px;
+}
+
+#main_announce .swipenavigation ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 0 10px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: background-color 0.5s ease-out;
+}
