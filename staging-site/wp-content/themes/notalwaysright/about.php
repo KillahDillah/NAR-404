@@ -14,7 +14,7 @@ get_header();
   </div>
         
 <?php endwhile; else: ?>
-<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+<?php get_page('404.php'); ?>
 <?php endif; ?>
 
 <?php get_footer(); ?>

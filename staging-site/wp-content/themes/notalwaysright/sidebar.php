@@ -1,9 +1,9 @@
 <!-- begin sidebar -->
 <div id="sidebar">           
-<?php if (!is_page('about') && !is_page('help') && !is_page('conduct')) { ?>
+<?php if (!is_page('about') && !is_page('help') && !is_page('conduct') && !is_page_template('404')) { ?>
 	<div class="sidebar_wrapper_atf_ad" style="text-align: center; margin-bottom:20px; width: 300px;">
 		<!--// NAR - Desktop Sidebar A //-->
-		<?php if ( !is_page('about') || !is_page('conduct') || !is_page('help') && function_exists ('adinserter')) echo adinserter (2); ?>
+		<?php if ( !is_page('about') || !is_page('conduct') || !is_page('help') || is_page_template('404') && function_exists ('adinserter')) echo adinserter (2); ?>
 
 	</div>
 

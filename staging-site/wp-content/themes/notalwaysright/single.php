@@ -131,7 +131,7 @@ get_header();
 <?php endwhile; else: ?>
 
 <?php get_page('404.php'); ?>
-<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+
 <?php endif; ?>
 
 <div style="padding-bottom: 20px;"></div>

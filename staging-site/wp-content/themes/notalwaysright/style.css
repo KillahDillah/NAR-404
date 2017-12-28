@@ -2762,3 +2762,9 @@ opacity: 0.75;
     background-color: #f8f8f8;
     padding: 20px;
 }
+
+/*404 page*/
+
+.errortitle {
+    float: none;
+}
