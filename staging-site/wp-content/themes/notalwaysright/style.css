@@ -2769,6 +2769,6 @@ opacity: 0.75;
     color: red;
 }
 
-#error {
+.post_header#error {
     display: flex !important;
 }

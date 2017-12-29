@@ -16,7 +16,9 @@
             <p>This is somewhat embarrassing, isn’t it? </p>
             <?php echo " | "; ?>
             <div id="clockbox">
-            <script type="text/javascript">{
+              <?php echo current_time('M j, Y @ G:i:s'); ?>
+
+            <!-- <script type="text/javascript">{
               function GetClock(){
               var d=new Date();
               var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
@@ -31,10 +33,31 @@
               setInterval(GetClock,1000);
               }
             }
+            </script> -->
+
+            <script type="text/javascript"> {
+            tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+            tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","Dec");
+
+            function GetClock(){
+            var d=new Date();
+            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+            var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+            if(nmin<=9) nmin="0"+nmin
+            if(nsec<=9) nsec="0"+nsec;
+
+            document.getElementById('clockbox').innerHTML=" "+tmonth[nmonth]+" "+ndate+", "+nyear+" @ "+nhour+":"+nmin+":"+nsec+"";
+            }
+
+            window.onload=function(){
+            GetClock();
+            setInterval(GetClock,1000);
+            }
+          }
             </script>
-          
 
           </div>
+          
         </div>
         <div class="storycontent">
 
