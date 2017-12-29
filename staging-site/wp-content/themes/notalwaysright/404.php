@@ -12,9 +12,28 @@
       <div class="post" id="post-<?php the_ID(); ?>">
         <div class="temp1">
           <h1 class="storytitle" ><?php _e('404 - File not found'); ?></h1>
-          <div class="post_header">
-            <?php echo " | test"; the_time();  ?>
+          <div class="post_header" id="error">
+            <p>This is somewhat embarrassing, isn’t it? </p>
+            <?php echo " | "; ?>
+            <div id="clockbox">
+            <script type="text/javascript">{
+              function GetClock(){
+              var d=new Date();
+              var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+              if(nmin<=9) nmin="0"+nmin
+              if(nsec<=9) nsec="0"+nsec;
+
+              document.getElementById('clockbox').innerHTML=""+nhour+":"+nmin+":"+nsec+"";
+              }
+
+              window.onload=function(){
+              GetClock();
+              setInterval(GetClock,1000);
+              }
+            }
+            </script>
           
+
           </div>
         </div>
         <div class="storycontent">
