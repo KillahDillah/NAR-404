@@ -1,10 +1,11 @@
-<!-- <?php
+<?php
 /**
- * Template Name: 404
+ * Template Name: 404 temp
  * Description: 404 pages (Not Found)
  */
+?>
 
-get_header(); ?> -->
+<?php get_header(); ?>
 
   <!-- <div id="primary" class="content-area">
     <div id="content" class="site-content" role="main"> -->
@@ -16,7 +17,11 @@ get_header(); ?> -->
 
       <!-- <div class="page-wrapper"> -->
         <div class="post_header">
-          <?php the_content(__('(more...)')); ?>
+          <p>change</p>  
+          <!--  -->
+          <!-- create file not found and set error404 as template -->
+          <!-- <p><?php _e( 'This is somewhat embarrassing, isn’t it?'); ?></p> -->
+
         </div>
         <div class="storycontent">
 
