@@ -16,7 +16,7 @@ get_header(); ?> -->
 
       <!-- <div class="page-wrapper"> -->
         <div class="post_header">
-          <p><?php _e( 'This is somewhat embarrassing, isn’t it?'); ?></p>
+          <?php the_content(__('(more...)')); ?>
         </div>
         <div class="storycontent">
 
