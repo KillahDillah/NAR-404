@@ -294,7 +294,7 @@ jQuery(document).ready(function() {
         <div class="container_content">
           <h3 class="abouttitle" style="padding-bottom: 15px;"><?php the_title(); ?></h3>
           <div class="about_divider"></div>
-      <? else : ?>
+      <? elseif (is_page()) : ?>
         <div class="span8">
           <div class="container_content">
       <? endif; ?>
