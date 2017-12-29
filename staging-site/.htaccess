@@ -1,0 +1,62 @@
+####                                                                                        ####
+####                                  WP Stagecoach .htaccess file                          ####
+####                                                                                        ####
+####   This file will NOT be transferred back to your live site if you make changes in it   ####
+####                                                                                        ####
+####   Lines that start with #WPSC# have been commented out to ensure no errors with your   ####
+####   staging site while running on our servers.                                           ####
+
+
+#  Begin WP Stagecoach redirects
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*\.jpg$|.*\.jpeg$|.*\.png$|.*\.gif$|.*\.svg$|.*\.bmp$|.*\.tif$|.*\.tiff$|.*\.pct$|.*\.pdf$|.*\.git$|.*\.mp3$|\.m4a$|.*\.mp4$|.*\.aac$|.*\.aif$|.*\.mov$|.*\.qt$|.*\.mpg$|.*\.mpeg$|.*\.wmv$|.*\.mkv$|.*\.avi$|.*\.mpa$|.*\.ra$|.*\.rm$|.*\.swf$|.*\.avi$|.*\.mpg$|.*\.mpeg$|\.flv$|\.swf$|.*\.gz$|.*\.sql$|.*\.tar$|.*\.log$|.*\.db$|.*\.dat$|.*\.123$|.*\.zip$|.*\.rar$|.*\.iso$|.*\.vcd$|.*\.toast$|.*\.bin$|.*\.hqx$|.*\.sit$|.*\.bak$|.*\.old$|.*\.psd$|.*\.psp$|.*\.ps$|.*\.ai$|.*\.rtf$|.*\.wps$|.*\.wpd$|.*\.dll$|.*\.exe$|.*\.wks$|.*\.msg$|.*\.mdb$|.*\.xls$|.*\.doc$|.*\.ppt$|.*\.xlsx$|.*\.docx$|.*\.pptx$|.*\.core$|^core.*)$ https://notalwaysright.com/$1 [R=301,L,NC]
+
+#  End WP Stagecoach redirects
+
+
+# BEGIN W3TC Browser Cache
+<IfModule mod_deflate.c>
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE text/css text/x-component application/x-javascript application/javascript text/javascript text/x-js text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/bmp application/java application/msword application/vnd.ms-fontobject application/x-msdownload image/x-icon image/webp application/json application/vnd.ms-access application/vnd.ms-project application/x-font-otf application/vnd.ms-opentype application/vnd.oasis.opendocument.database application/vnd.oasis.opendocument.chart application/vnd.oasis.opendocument.formula application/vnd.oasis.opendocument.graphics application/vnd.oasis.opendocument.presentation application/vnd.oasis.opendocument.spreadsheet application/vnd.oasis.opendocument.text audio/ogg application/pdf application/vnd.ms-powerpoint image/svg+xml application/x-shockwave-flash image/tiff application/x-font-ttf application/vnd.ms-opentype audio/wav application/vnd.ms-write application/font-woff application/font-woff2 application/vnd.ms-excel
+    <IfModule mod_mime.c>
+        # DEFLATE by extension
+        AddOutputFilter DEFLATE js css htm html xml
+    </IfModule>
+    </IfModule>
+</IfModule>
+<FilesMatch "\.(html|htm|rtf|rtx|svg|txt|xsd|xsl|xml|HTML|HTM|RTF|RTX|SVG|TXT|XSD|XSL|XML)$">
+    <IfModule mod_headers.c>
+        Header append Vary User-Agent env=!dont-vary
+    </IfModule>
+</FilesMatch>
+<FilesMatch "\.(bmp|class|doc|docx|eot|exe|ico|webp|json|mdb|mpp|otf|_otf|odb|odc|odf|odg|odp|ods|odt|ogg|pdf|pot|pps|ppt|pptx|svg|svgz|swf|tif|tiff|ttf|ttc|_ttf|wav|wri|woff|woff2|xla|xls|xlsx|xlt|xlw|BMP|CLASS|DOC|DOCX|EOT|EXE|ICO|WEBP|JSON|MDB|MPP|OTF|_OTF|ODB|ODC|ODF|ODG|ODP|ODS|ODT|OGG|PDF|POT|PPS|PPT|PPTX|SVG|SVGZ|SWF|TIF|TIFF|TTF|TTC|_TTF|WAV|WRI|WOFF|WOFF2|XLA|XLS|XLSX|XLT|XLW)$">
+    <IfModule mod_headers.c>
+         Header unset Last-Modified
+    </IfModule>
+</FilesMatch>
+# END W3TC Browser Cache
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+
+
+###  BEGIN WP Stagecoach password protection  ###
+# This is set up by WP Stagecoach to password protect this staging site.
+# You may delete to the end of this section if you wish to disable the password protection.
+AuthName "This staging-site is password protected.  Please enter your user name and password to continue."
+AuthUserFile /var/www/nar/session/.htpasswd
+AuthType Basic
+require valid-user
+# The line below allows WP Stagecoach support staff to view your site - you can safely remove this line and the "Satisfy Any" below
+Allow from 69.46.38.19/32
+Satisfy Any
+Deny from All
+###  END WP Stagecoach password protection  ###

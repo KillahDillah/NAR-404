@@ -2,7 +2,7 @@
 
 					</div> <!--// container_content //-->
 					
-				<? if (is_page('about') || is_page('help')) : ?>
+				<?php if (is_page('about') || is_page('help')) : ?>
 					</div> <!--// span8 || about8//-->
 					<div class="about4" style="background-color: #fff;"><?php get_sidebar(); ?></div>
 				<? elseif (is_page('conduct')) : ?>
