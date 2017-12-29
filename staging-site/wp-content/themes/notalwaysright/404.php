@@ -34,10 +34,14 @@
           $websitename = get_bloginfo('name'); #sets the blog's name, according to wordpress
 
             if (!isset($_SERVER['HTTP_REFERER'])) {
+              #if URL does not exist in server.
+
               #politely blames the user for all the problems they caused
                   echo "Things are NOT ALWAYS RIGHT around here! "; #starts assembling an output paragraph
             // $casemessage = "Things are NOT ALWAYS RIGHT around here!";
             } elseif (isset($_SERVER['HTTP_REFERER'])) {
+              #if URL is in system but they can't view it.
+
               #this will help the user find what they want, and email me of a bad link
             // echo "clicked a link to"; #now the message says You clicked a link to...
                   #setup a message to be sent to me
