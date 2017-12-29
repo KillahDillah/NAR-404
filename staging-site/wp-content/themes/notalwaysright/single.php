@@ -6,7 +6,7 @@ get_header();
 
 <div class="post" id="post-<?php the_ID(); ?>">
 
-
+	<!-- template used for single posts -->
 	<!-- CUSTOM 3/7/2016 Updated post title + post header -->
 	<!— POST TITLE —>
 	<h1 class="storytitle"><a href="<?php the_permalink() ?>" rel="bookmark">
@@ -130,7 +130,7 @@ get_header();
 <div style="clear: both;"></div>
 <?php endwhile; else: ?>
 
-<?php get_page('error404'); ?>
+<?php get_page('404'); ?>
 
 <?php endif; ?>
 

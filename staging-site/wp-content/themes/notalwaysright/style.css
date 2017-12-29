@@ -2765,6 +2765,6 @@ opacity: 0.75;
 
 /*404 page*/
 
-.errortitle {
-    float: none;
+#not {
+    color: red;
 }

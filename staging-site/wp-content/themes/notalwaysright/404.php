@@ -17,11 +17,7 @@
 
       <!-- <div class="page-wrapper"> -->
         <div class="post_header">
-          <p>change</p>  
-          <!--  -->
-          <!-- create file not found and set error404 as template -->
-          <!-- <p><?php _e( 'This is somewhat embarrassing, isn’t it?'); ?></p> -->
-
+          <p><?php _e( 'This is somewhat embarrassing, isn’t it?'); ?></p>
         </div>
         <div class="storycontent">
 
@@ -37,7 +33,7 @@
               #if URL does not exist in server.
 
               #politely blames the user for all the problems they caused
-                  echo "Things are NOT ALWAYS RIGHT around here! "; #starts assembling an output paragraph
+                  echo "Things are <b style='color:#c65555'>NOT</b><b> ALWAYS RIGHT</b> around here! "; #starts assembling an output paragraph
             // $casemessage = "Things are NOT ALWAYS RIGHT around here!";
             } elseif (isset($_SERVER['HTTP_REFERER'])) {
               #if URL is in system but they can't view it.

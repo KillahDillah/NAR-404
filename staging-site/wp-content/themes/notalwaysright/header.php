@@ -295,8 +295,6 @@ jQuery(document).ready(function() {
           <h3 class="abouttitle" style="padding-bottom: 15px;"><?php the_title(); ?></h3>
           <div class="about_divider"></div>
       <? elseif (!isset($_SERVER['HTTP_REFERER'])) : ?>
-        
-  
       <? else : ?>
         <div class="span8">
           <div class="container_content">
