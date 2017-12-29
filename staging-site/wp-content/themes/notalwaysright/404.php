@@ -10,14 +10,12 @@
   <!-- <div id="primary" class="content-area">
     <div id="content" class="site-content" role="main"> -->
       <div class="post" id="post-<?php the_ID(); ?>">
-      <!-- <div class="page-header"> -->
-        <h1 class="storytitle errortitle" ><?php _e('404 - File not found'); ?></h1>
-        
-      <!-- </header> -->
-
-      <!-- <div class="page-wrapper"> -->
-        <div class="post_header">
-          <p><?php _e( 'This is somewhat embarrassing, isn’t it?'); ?></p>
+        <div class="temp1">
+          <h1 class="storytitle" ><?php _e('404 - File not found'); ?></h1>
+          <div class="post_header">
+            <?php echo " | test"; the_time();  ?>
+          
+          </div>
         </div>
         <div class="storycontent">
 
@@ -58,7 +56,8 @@
 
           <?php get_search_form(); ?>
           <p>or return home.</p>
-          
+          <p><?php _e( 'This is somewhat embarrassing, isn’t it?'); ?>
+          </p>
         </div><!-- .page-content -->
       <!-- </div> --><!-- .page-wrapper -->
 

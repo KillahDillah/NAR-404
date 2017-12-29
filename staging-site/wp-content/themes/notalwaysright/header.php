@@ -284,18 +284,21 @@ jQuery(document).ready(function() {
     </div>
     <!--// Main Content Container //-->
     <div class="container" id="main_content">
-      <div class="row"> <!--// margin-left: 0px;  //-->
+       <!--// margin-left: 0px;  //-->
       <?php if (is_page('about') || is_page('help')) : ?>
+        <div class="row">
         <div class="about8"> <!--// margin-left: -10px; //-->
           <div class="container_content">
             <h3 class="abouttitle" style="padding-bottom: 15px;"><?php the_title(); ?></h3>
             <div class="about_divider"></div>
       <? elseif (is_page('conduct')) : ?>
+        <div class="row">
         <div class="container_content">
           <h3 class="abouttitle" style="padding-bottom: 15px;"><?php the_title(); ?></h3>
           <div class="about_divider"></div>
-      <? elseif (is_page('404')) : ?>
+      <? elseif (!isset($_SERVER['HTTP_REFERER'])) : ?>
       <? else : ?>
+        <div class="row">
         <div class="span8">
           <div class="container_content">
       <? endif; ?>
