@@ -82,13 +82,13 @@ jQuery(document).ready(function() {
         <div id="navs_social_ig"><a href="//twitter.com/notalwaysright"><img src="/wp-content/themes/notalwaysright/images/nan_flat_twitter.png" alt="Not Always Right: Twitter" title="Not Always Right: Twitter" /></a></div>
         <a href="#" id="searchselect"><img src="/wp-content/themes/notalwaysright/images/nan_flat_search.png" alt="Search" title="Search" /></a>
         <div id="menu_search">
-              <form style="display: inline;" id="searchform" method="get" action="//notalwaysright.com">
-                  <div class="input-append">
-                    <input class="span3" type="text" name="s" id="s">
-                    <button class="btn" type="submit">SEARCH</button>
-                  </div>
-                </form>
-          </div>
+          <form style="display: inline;" id="searchform" method="get" action="//notalwaysright.com">
+            <div class="input-append">
+              <input class="span3" type="text" name="s" id="s">
+              <button class="btn" type="submit">SEARCH</button>
+            </div>
+          </form>
+        </div>
         <script type="text/javascript">
           var flip = 0;
           jQuery( "#searchselect" ).click(function() {
@@ -285,18 +285,23 @@ jQuery(document).ready(function() {
     <!--// Main Content Container //-->
     <div class="container" id="main_content">
        <!--// margin-left: 0px;  //-->
-      <?php if (is_page('about') || is_page('help')) : ?>
+      <?php if (is_page('about') || is_page('help') || (!isset($_SERVER['HTTP_REFERER'])) ) : ?>
         <div class="row">
         <div class="about8"> <!--// margin-left: -10px; //-->
           <div class="container_content">
-            <h3 class="abouttitle" style="padding-bottom: 15px;"><?php the_title(); ?></h3>
-            <div class="about_divider"></div>
+            <?php if (is_page('about') || is_page('help')) {
+              echo "<h3 class='abouttitle' style='padding-bottom: 15px;'>
+              the_title(); 
+              </h3>; 
+              <div class='about_divider'></div>"; 
+            }  ?>
+            
       <? elseif (is_page('conduct')) : ?>
         <div class="row">
         <div class="container_content">
           <h3 class="abouttitle" style="padding-bottom: 15px;"><?php the_title(); ?></h3>
           <div class="about_divider"></div>
-      <? elseif (!isset($_SERVER['HTTP_REFERER'])) : ?>
+      
       <? else : ?>
         <div class="row">
         <div class="span8">

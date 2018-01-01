@@ -1,16 +1,15 @@
 <!-- begin footer -->
-
 					</div> <!--// container_content //-->
-					
-				<?php if (is_page('about') || is_page('help')) : ?>
-					</div> <!--// span8 || about8//-->
-					<div class="about4" style="background-color: #fff;"><?php get_sidebar(); ?></div>
-				<? elseif (is_page('conduct')) : ?>
-					
-				<? else : ?>
-				</div> <!--// span8 || about8//-->
-				<div class="span4" style="background-color: #fff;"><?php get_sidebar(); ?></div>
-				<? endif; ?>
+				
+<?php if (is_page('about') || is_page('help') || (!isset($_SERVER['HTTP_REFERER'])) ) : ?>
+	</div> <!--// span8 || about8//-->
+	<div class="about4" style="background-color: #fff;"><?php get_sidebar("newsidebar"); ?></div>
+<? elseif (is_page('conduct')) : ?>
+	
+<? else : ?>
+</div> <!--// span8 || about8//-->
+<div class="span4" style="background-color: #fff;"><?php get_sidebar(); ?></div>
+<? endif; ?>
 				
 			</div> <!--// row //-->
 		</div> <!--// container //-->
@@ -102,12 +101,16 @@
 
 
 </div> <!--// End container / main_content //-->
-
+<?php if (!isset($_SERVER['HTTP_REFERER'])) : ?>
+  </div> <!--// end again//-->
+</div> <!--//end error-wrapper//-->
+<? endif ; ?>
 		</div>  <!--// span12 //-->
 	</div>  <!--// row //-->
 </div>  <!--// container //-->
 
 </DIV> <!--// END FOOTER //-->
+
 
 <!--// RESPONSIVE ADS //-->
 <script data-cfasync-"true" src="//notalwaysright.com/wp-content/themes/notalwaysright/js/bootstrap.js"></script>

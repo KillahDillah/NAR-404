@@ -2772,3 +2772,12 @@ opacity: 0.75;
 .post_header#error {
     display: flex !important;
 }
+
+#searchform {
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+#searchsubmit:hover {
+    color: red;
+}
