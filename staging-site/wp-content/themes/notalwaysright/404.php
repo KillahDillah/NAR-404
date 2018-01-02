@@ -9,23 +9,26 @@
 
 <?php get_header(); ?>
 
-  <div style="width: 75%;" class="post">
-    <div class="temp1" style="margin:auto; width: max-content;">
+  <div class="post">
+    <div class="temp1" style="margin:auto;">
     <!-- <a href="notalwaysright.com/popular/">Home > </a> -->
       <h1 class="storytitle" ><?php _e('404 Error - File not found'); ?></h1>
 
       <div class="post_header" id="error">
-        <p style="margin: 0px;">This is somewhat embarrassing </p>
-        <?php echo " | "; ?>
-        <div id="clockbox">
+        <a>This is somewhat | </a>
+        <p>embarrassing |  </p>
+        
+        <div id="clockbox" style="padding:0px 2px">
           <?php echo current_time('M j, Y @ G:i:s'); ?>
         <script type="text/javascript"> {
-          tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+          // tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
           tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","Dec");
 
           function GetClock(){
           var d=new Date();
-          var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+          // var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+          var nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
           var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
           if(nmin<=9) nmin="0"+nmin
           if(nsec<=9) nsec="0"+nsec;
@@ -52,8 +55,8 @@
             #if URL does not exist in server.
 
             #politely blames the user for all the problems they caused
-                echo "<i>Obviously, things are </i><b style='color:#c65555'>NOT</b><b> ALWAYS RIGHT</b><i> around here!";
-                echo "<p>Lower your expectations and you'll never be dissapointed.</i></p>";
+                echo "<i>Obviously, things are </i><b style='color:#c65555'>NOT</b><b> ALWAYS RIGHT</b><i> around here!</i>";
+                echo "<p>Lower your expectations and you'll never be dissapointed.</p>";
                 // echo '<p><b>NAR:</b> "You got here because something went wrong."</p> '; 
                 // echo '<p><b>You:</b> "I\'m always right!"</p>';
                 #starts assembling an output paragraph
@@ -76,16 +79,20 @@
         ; ?> 
         </p>
       </div><!-- .storycontent -->  
-    </div><!-- .temp1 -->
+    
     <p><?php echo $casemessage; ?></p>
+    <div class="post_divider"></div>
     <div id="center-center">
-      <p style="text-align: center; margin-top: 10px;"><b style="text-align: center;">Try searching for something different or visit one of the links below.</b></p>
+      <p style="text-align: center; margin-top: 10px;"><b style="text-align: center;">Try searching for something different, exploring the story categories above, or visiting our most recent posts below.</b></p>
       <p style="text-align: center;"></p>
       <a href="#">Home</a>
-    </div>
-  </div>
+    </div> <!--center-center -->
+    </div><!-- .temp1 -->
+  </div> <!-- unlabeled -->
   
-       
+<div>
+  <?php dynamic_sidebar('sidebar-2') ; ?>
+</div>     
 <?php get_footer(); ?>
 
 

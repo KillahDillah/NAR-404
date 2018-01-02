@@ -10,6 +10,20 @@ function cws_nice_search_redirect() {
 		exit();
 	}
 }
+
+add_action( 'widgets_init', 'child_register_sidebar' );
+
+function child_register_sidebar(){
+    register_sidebar(array(
+        'name' => 'Sidebar 2',
+        'id' => 'sidebar-2',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>',
+    ));
+}
+
 add_action( 'template_redirect', 'cws_nice_search_redirect' );
 if ( function_exists('register_sidebar') )
 	register_sidebar(array(

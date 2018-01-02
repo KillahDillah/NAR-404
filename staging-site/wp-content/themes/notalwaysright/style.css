@@ -534,7 +534,7 @@ line-height: 0px; */
 #sidebar li {
     list-style-type: none;
 }
-#sidebar ul {
+#sidebar ul, #recent-posts-2 ul {
     list-style-type: none;
 }
 .at4-recommended-recommended {
@@ -2780,4 +2780,22 @@ opacity: 0.75;
 
 #searchsubmit:hover {
     color: red;
+}
+
+#recent-posts-2 ul {
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+#recent-posts-2 {
+    text-align: center;
+}
+
+#recent-posts-2 li {
+    border: 1px black solid;
+    margin: 10px;
+    border-radius: 4px;
+    width: 100px;
+    padding: 10px;
 }
