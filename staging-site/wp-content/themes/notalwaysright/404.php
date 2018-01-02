@@ -15,8 +15,9 @@
       <h1 class="storytitle" ><?php _e('404 Error - File not found'); ?></h1>
 
       <div class="post_header" id="error">
-        <a>This is somewhat | </a>
-        <p>embarrassing |  </p>
+        <p style="color: #555;">This is somewhat</p>
+        <p style="margin-left: 2px;
+    margin-right: 2px;"> | embarrassing |  </p>
         
         <div id="clockbox" style="padding:0px 2px">
           <?php echo current_time('M j, Y @ G:i:s'); ?>
@@ -85,7 +86,7 @@
     <div id="center-center">
       <p style="text-align: center; margin-top: 10px;"><b style="text-align: center;">Try searching for something different, exploring the story categories above, or visiting our most recent posts below.</b></p>
       <p style="text-align: center;"></p>
-      <a href="#">Home</a>
+      
     </div> <!--center-center -->
     </div><!-- .temp1 -->
   </div> <!-- unlabeled -->

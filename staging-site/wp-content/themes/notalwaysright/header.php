@@ -289,12 +289,12 @@ jQuery(document).ready(function() {
         <div class="row">
         <div class="about8"> <!--// margin-left: -10px; //-->
           <div class="container_content">
-            <?php if (is_page('about') || is_page('help')) {
-              echo "<h3 class='abouttitle' style='padding-bottom: 15px;'>
-              the_title(); 
-              </h3>; 
-              <div class='about_divider'></div>"; 
-            }  ?>
+            <?php if (is_page('about') || is_page('help')) : ?>
+              <h3 class='abouttitle' style='padding-bottom: 15px;'>
+              <?php the_title(); ?>
+              </h3> 
+              <div class='about_divider'></div> 
+            <? endif ; ?>
             
       <? elseif (is_page('conduct')) : ?>
         <div class="row">

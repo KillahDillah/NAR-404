@@ -11,14 +11,15 @@ function cws_nice_search_redirect() {
 	}
 }
 
-add_action( 'widgets_init', 'child_register_sidebar' );
-
+add_action( 'widgets_init', 'child_register_sidebar' ); 
+// Leah
 function child_register_sidebar(){
     register_sidebar(array(
         'name' => 'Sidebar 2',
         'id' => 'sidebar-2',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
+        'class' => 'leah',
         'before_title' => '<h4>',
         'after_title' => '</h4>',
     ));

@@ -1019,7 +1019,7 @@ ul.post-meta li {
 .about_divider {
     background: url('images/storycontent_bg_new_flipped.jpg') no-repeat;
     height: 35px;
-    width: 158%;
+    width: inherit;
     position: relative;
     margin: 0;
 }
@@ -2782,7 +2782,7 @@ opacity: 0.75;
     color: red;
 }
 
-#recent-posts-2 ul {
+#recent-posts-2 div.list, #recent-posts-2 ul {
     display: flex;
     margin: auto;
     justify-content: space-evenly;
@@ -2790,12 +2790,77 @@ opacity: 0.75;
 
 #recent-posts-2 {
     text-align: center;
+    text-transform: uppercase;
 }
 
-#recent-posts-2 li {
-    border: 1px black solid;
-    margin: 10px;
-    border-radius: 4px;
-    width: 100px;
+.list-404-out {
+    border: 1.5px #c6555b solid;
+    /*margin: 10px;*/
+    border-radius: 10px;
+    display: flex;
+    background-color: #f8f8f8;
+    position: relative;
+    /*justify-content: space-evenly;*/
+    
+}
+
+.list-404-out a {
+    /*padding: 10px;*/
+    display: flex;
+    width: 120px;
+
+}
+
+.out-list-404 {
+   display: flex;
+   /*justify-content: space-evenly;*/ 
+   justify-content: space-between;
+   margin: 10px;
+   flex-wrap: wrap;
+}
+
+/* responsive*/
+
+@media screen {
+    
+}
+
+.list-404-in {
     padding: 10px;
+    display: block;
+    align-self: center;
+}
+
+
+/*#recent-posts-2 div:hover {
+    font-weight: bold;
+    color: blue;
+}*/
+
+/*#recent-posts-2 li a, #recent-posts-2 div a {
+    align-self: center;
+    padding: 10px;
+    display: block;
+    width: 100px;
+}*/
+
+#recent-posts-2 li a:hover, #recent-posts-2 div a:hover {
+    font-weight: bold;
+}
+
+.list-404-out:after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: #323232;
+    z-index: -1;
+    border-radius: 4px;
+}
+
+#recent-posts-2 h4 {
+    color: #555;
+    margin-bottom: 20px;
 }
