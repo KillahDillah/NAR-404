@@ -93,6 +93,7 @@
   
 <div>
   <?php dynamic_sidebar('sidebar-2') ; ?>
+  <!-- wp-includes widget class-wp-widget-recent-posts -->
 </div>     
 <?php get_footer(); ?>
 
