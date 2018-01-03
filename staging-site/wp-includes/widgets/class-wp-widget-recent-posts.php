@@ -84,20 +84,38 @@ class WP_Widget_Recent_Posts extends WP_Widget {
 			echo $args['before_title'] . $title . $args['after_title'];
 		}
 		?>
-		<ul>
+		<div class="out-list-404">
 			<?php foreach ( $r->posts as $recent_post ) : ?>
 				<?php
 				$post_title = get_the_title( $recent_post->ID );
 				$title      = ( ! empty( $post_title ) ) ? $post_title : __( '(no title)' );
 				?>
-				<li>
-					<a href="<?php the_permalink( $recent_post->ID ); ?>"><?php echo $title ; ?></a>
+				
+					<div class="list-404-out">
+					<a href="<?php the_permalink( $recent_post->ID ); ?>"><span class="list-404-in"><?php echo $title ; ?></span>
+					<div class="meta-404-wrap">
+						<div id="meta_container">
+							<!-- <div id="meta_vote"> --><?php if(function_exists('the_ratings')) { the_ratings(); } ?><!-- </div> -->
+							<!-- <div id="meta_comments_wrapper"> -->
+								<div id="meta_comments">
+										<div class="comments_count">
+											<div class="disqus-comment-count" data-disqus-url="<?php echo get_permalink($post->ID); ?>#disqus_thread">0</div>
+											<span class="comments_text">COMMENTS </span>
+										</div>
+									<!-- </a> -->
+								</div>
+							<!-- </div> -->
+						</div>
+					</div>
+
+					</a>
 					<?php if ( $show_date ) : ?>
 						<span class="post-date"><?php echo get_the_date( '', $recent_post->ID ); ?></span>
 					<?php endif; ?>
-				</li>
+				</div>
+				
 			<?php endforeach; ?>
-		</ul>
+		</div>
 		<?php
 		echo $args['after_widget'];
 	}

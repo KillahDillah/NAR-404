@@ -218,7 +218,7 @@ function get_search_form( $echo = true ) {
 			$form = '<form role="search" method="get" id="searchform" class="searchform" action="' . esc_url( home_url( '/' ) ) . '">
 				<div>
 					
-					<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="Keyword" />
+					<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="Keyword...or whatever" />
 					<input type="submit" id="searchsubmit" value="'. esc_attr_x( 'Search', 'submit button' ) .'" />
 				</div>
 			</form>';
