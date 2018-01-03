@@ -15,12 +15,12 @@
       <h1 class="storytitle" ><?php _e('404 Error - File not found'); ?></h1>
 
       <div class="post_header" id="error">
-        <p style="color: #555;">This is somewhat</p>
+        <p style="color: #555; margin-bottom: 0px">This is somewhat</p>
         <p style="margin-left: 2px;
-    margin-right: 2px;"> | embarrassing |  </p>
+    margin-right: 2px; margin-bottom: 0px"> | embarrassing |  </p>
         
         <div id="clockbox" style="padding:0px 2px">
-          <?php echo current_time('M j, Y @ G:i:s'); ?>
+          <?php echo current_time('F j, Y @ G:i:s'); ?>
         <script type="text/javascript"> {
 
           // tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");

@@ -2771,6 +2771,7 @@ opacity: 0.75;
 
 .post_header#error {
     display: flex !important;
+    flex-wrap: wrap;
 }
 
 #searchform {
