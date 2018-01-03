@@ -2792,10 +2792,18 @@ opacity: 0.75;
     border: 3px #c6555b solid;
     margin: 10px;
     border-radius: 10px;
-    display: inline;
+    display: flex;
+    align-items:center;
     background-color: #f8f8f8;
-    width: 50%;
+    width: 40%;
     overflow: hidden;
+    position: relative;
+    padding-bottom:30px;
+}
+.list-404-out .meta-404-wrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 .list-404-out a div.post-ratings div.ratings_image {
     display: none;
@@ -2819,16 +2827,16 @@ opacity: 0.75;
     margin-top: 0px;
 }
 
-.list-404-out div.ratings_meta {}
-
 .list-404-out a {
-    display: inline;
-    width: 160px;
+    display: block;
+    height: 100%;
+}
+.list-404-out:hover {
+    background-color: #323232;
 
 }
-.list-404-out a:hover {
-    background-color: #323232;
-    color: #f8f8f8;
+.list-404-out:hover a {
+    color:#f8f8f8;
 }
 
 .out-list-404 {
@@ -2892,3 +2900,5 @@ opacity: 0.75;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
+
+
