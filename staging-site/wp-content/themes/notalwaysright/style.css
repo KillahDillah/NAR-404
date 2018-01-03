@@ -2646,6 +2646,7 @@ opacity: 0.75;
 	margin-left: -50px;
     text-shadow: grey 1px 1px;
     padding-bottom: 0px !important;
+    float: none;
 }
 
 .aboutcontent {
@@ -2757,7 +2758,7 @@ opacity: 0.75;
 }
 
 .gform_body {
-    border: 1px solid #323232;
+    border: 2px solid #c6555b;
     border-radius: 16px;
     background-color: #f8f8f8;
     padding: 20px;
@@ -2774,14 +2775,7 @@ opacity: 0.75;
     flex-wrap: wrap;
 }
 
-#searchform {
-    margin-bottom: 0px;
-    text-align: center;
-}
 
-#searchsubmit:hover {
-    color: red;
-}
 
 #recent-posts-2 div.list, #recent-posts-2 ul {
     display: flex;
@@ -2795,15 +2789,15 @@ opacity: 0.75;
 }
 
 .list-404-out {
-    border: 1.5px #c6555b solid;
+    border: 3px #c6555b solid;
     margin: 10px;
     border-radius: 10px;
     display: flex;
     background-color: #f8f8f8;
     position: relative;
     /*justify-content: space-evenly;*/
-    box-shadow: 0px 0px 25px 8px #323232;
-    
+    /*box-shadow: 0px 0px 25px 8px #323232;*/
+    overflow: hidden;
 }
 
 .list-404-out a {
@@ -2811,6 +2805,10 @@ opacity: 0.75;
     display: flex;
     width: 160px;
 
+}
+.list-404-out a:hover {
+    background-color: #323232;
+    color: #f8f8f8;
 }
 
 .out-list-404 {
@@ -2829,19 +2827,12 @@ opacity: 0.75;
 }
 /* responsive*/
 
-@media screen and (max-width: 599px){
-    
-    .list-404-out {
-        margin: 10px;
-    }
 
-}
-
-@media screen and (min-width: 600px) and (max-width: 1100px){
+@media screen and (max-width: 1023px){
 
     .list-404-out {
         margin: 10px;
-        box-shadow: none;
+        border: 1.5px #c6555b solid;
     }
     .list-404-out {
         display: block;
@@ -2853,7 +2844,6 @@ opacity: 0.75;
         content: none;
     }
     .list-404-in {
-        
         margin: 0px;
     }
     .out-list-404 {
@@ -2871,8 +2861,8 @@ opacity: 0.75;
     }
 }
 
-@media screen and (min-width:1100px) {
-.list-404-out:after {
+@media screen and (min-width:1024px) {
+/*.list-404-out:after {
     content: '';
     position: absolute;
     top: -5px;
@@ -2882,30 +2872,17 @@ opacity: 0.75;
     background: #323232;
     z-index: -1;
     border-radius: 4px;
-}
-}
-
-
-/*#recent-posts-2 div:hover {
-    font-weight: bold;
-    color: blue;
 }*/
 
-/*#recent-posts-2 li a, #recent-posts-2 div a {
-    align-self: center;
-    padding: 10px;
+.storycontent #expectations {
     display: block;
-    width: 100px;
-}*/
+}
 
-/*#recent-posts-2 li a:hover, #recent-posts-2 div a:hover {
-    font-weight: bold;
-}*/
-
-
+}
 
 
 #recent-posts-2 h4 {
     color: #555;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }

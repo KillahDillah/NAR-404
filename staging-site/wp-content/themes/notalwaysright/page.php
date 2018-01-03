@@ -18,7 +18,7 @@ get_header();
 </div>
 
 <?php endwhile; else: ?>
-<?php get_page('error404.php'); ?>
+<?php get_page('404'); ?>
 <?php endif; ?>
 
 <?php get_footer(); ?>

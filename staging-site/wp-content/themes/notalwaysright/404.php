@@ -46,7 +46,7 @@
         </div>  
       </div>
       <div class="storycontent">
-        <p style="margin: 0px;"> 
+        <span style="margin: 0px;"> 
         <?php
         $adminemail = get_option('admin_email'); #the administrator email address, according to wordpress
         $website = get_bloginfo('url'); #gets your blog's url from wordpress
@@ -56,8 +56,8 @@
             #if URL does not exist in server.
 
             #politely blames the user for all the problems they caused
-                echo "<i>Obviously, things are </i><b style='color:#c65555'>NOT</b><b> ALWAYS RIGHT</b><i> around here!</i>";
-                echo "<p>Lower your expectations and you'll never be dissapointed.</p>";
+                echo "<i>Clearly, things are </i><b style='color:#c65555'>NOT</b><b> ALWAYS RIGHT</b><i> around here!</i>";
+                echo "<span id='expectations'> Lower your expectations and you'll never be dissapointed.</span>";
                 // echo '<p><b>NAR:</b> "You got here because something went wrong."</p> '; 
                 // echo '<p><b>You:</b> "I\'m always right!"</p>';
                 #starts assembling an output paragraph
@@ -78,7 +78,7 @@
                 about this problem.";#set a friendly message
           }
         ; ?> 
-        </p>
+        </span>
       </div><!-- .storycontent -->  
     
     <p><?php echo $casemessage; ?></p>

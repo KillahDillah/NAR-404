@@ -285,16 +285,14 @@ jQuery(document).ready(function() {
     <!--// Main Content Container //-->
     <div class="container" id="main_content">
        <!--// margin-left: 0px;  //-->
-      <?php if (is_page('about') || is_page('help')  ) : ?>
+      <?php if (is_page('about') || is_page('help') ) : ?>
         <div class="row">
         <div class="about8"> <!--// margin-left: -10px; //-->
           <div class="container_content">
-            <?php if (is_page('about') || is_page('help')) : ?>
-              <h3 class='abouttitle' style='padding-bottom: 15px;'>
-              <?php the_title(); ?>
-              </h3> 
-              <div class='about_divider'></div> 
-            <? endif ; ?>
+            <h3 class='abouttitle' style='padding-bottom: 15px;'>
+            <?php the_title(); ?>
+            </h3> 
+            <div class='post_divider'></div> 
             
       <? elseif (is_page('conduct')) : ?>
         <div class="row">
