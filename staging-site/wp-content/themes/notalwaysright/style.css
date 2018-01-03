@@ -2792,9 +2792,9 @@ opacity: 0.75;
     border: 3px #c6555b solid;
     margin: 10px;
     border-radius: 10px;
-    display: flex;
+    display: inline;
     background-color: #f8f8f8;
-    /*justify-content: space-evenly;*/
+    width: 50%;
     overflow: hidden;
 }
 .list-404-out a div.post-ratings div.ratings_image {
@@ -2822,8 +2822,7 @@ opacity: 0.75;
 .list-404-out div.ratings_meta {}
 
 .list-404-out a {
-    /*padding: 10px;*/
-    display: inline-block;
+    display: inline;
     width: 160px;
 
 }
@@ -2854,18 +2853,13 @@ opacity: 0.75;
     .list-404-out {
         margin: 10px;
         border: 1.5px #c6555b solid;
-    }
-    .list-404-out {
-        /*display: block;*/
         display: inline;
         width: 50%;
     }
-    .list-404-out a {
+    /*.list-404-out a {
         display: inline;
-    }
-    .list-404-out:after{
-        content: none;
-    }
+    }*/
+    
     .list-404-in {
         margin: 0px;
     }
@@ -2885,17 +2879,6 @@ opacity: 0.75;
 }
 
 @media screen and (min-width:1024px) {
-/*.list-404-out:after {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background: #323232;
-    z-index: -1;
-    border-radius: 4px;
-}*/
 
 .storycontent #expectations {
     display: block;
