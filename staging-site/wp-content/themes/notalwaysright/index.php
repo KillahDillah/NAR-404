@@ -160,6 +160,6 @@ else if ($countVar == 4) { ?>
 
 <?php $countVar++; ?> 
 <?php endwhile; else: ?>
-<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+<?php get_page_template('404'); ?>
 <?php endif; ?>
 <?php get_footer(); ?>	

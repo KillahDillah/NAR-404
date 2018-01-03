@@ -2792,7 +2792,7 @@ opacity: 0.75;
     border: 3px #c6555b solid;
     margin: 10px;
     border-radius: 10px;
-    display: inline;
+    display: flex;
     background-color: #f8f8f8;
     /*justify-content: space-evenly;*/
     overflow: hidden;

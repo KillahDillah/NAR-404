@@ -130,7 +130,7 @@ get_header();
 <div style="clear: both;"></div>
 <?php endwhile; else: ?>
 
-<?php get_page('404'); ?>
+<?php get_page_template('404'); ?>
 
 <?php endif; ?>
 
