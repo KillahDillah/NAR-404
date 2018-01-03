@@ -8,7 +8,7 @@
 		<div class="sidebar_wrapper_atf_ad" style="text-align: center; margin-bottom:20px; width: 300px;">
 	<? endif; ?>
 		<!--// NAR - Desktop Sidebar A //-->
-	<?php if ( !is_page('about') || !is_page('conduct') || !is_page('help') || is_page_template('404') && function_exists ('adinserter')) echo adinserter (2); ?>
+	<?php if ( !is_page('about') || !is_page('conduct') || !is_page('help') || is_page('error') && function_exists ('adinserter')) echo adinserter (2); ?>
 
 	</div>
 
@@ -77,7 +77,7 @@
 	
 
 <!-- CUSTOM 10/29/17 FB -->
-<?php if (!isset($_SERVER['HTTP_REFERER'])) : ?>
+<?php if (!isset($_SERVER['HTTP_REFERER']) || is_page('error')) : ?>
 <? else : ?>
 <div class="fb-page" data-href="https://www.facebook.com/notalwaysright/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/notalwaysright/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/notalwaysright/">Not Always Right</a></blockquote></div>
 <? endif; ?>
