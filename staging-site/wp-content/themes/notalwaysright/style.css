@@ -2790,45 +2790,98 @@ opacity: 0.75;
 
 #recent-posts-2 {
     text-align: center;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 
 .list-404-out {
     border: 1.5px #c6555b solid;
-    /*margin: 10px;*/
+    margin: 10px;
     border-radius: 10px;
     display: flex;
     background-color: #f8f8f8;
     position: relative;
     /*justify-content: space-evenly;*/
+    box-shadow: 0px 0px 25px 8px #323232;
     
 }
 
 .list-404-out a {
     /*padding: 10px;*/
     display: flex;
-    width: 120px;
+    width: 160px;
 
 }
 
 .out-list-404 {
    display: flex;
-   /*justify-content: space-evenly;*/ 
-   justify-content: space-between;
+   justify-content: space-around; 
+   /*justify-content: space-between;*/
    margin: 10px;
    flex-wrap: wrap;
 }
 
-/* responsive*/
-
-@media screen {
-    
-}
-
 .list-404-in {
     padding: 10px;
+    margin: 10px;
     display: block;
     align-self: center;
+}
+/* responsive*/
+
+@media screen and (max-width: 599px){
+    
+    .list-404-out {
+        margin: 10px;
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1100px){
+
+    .list-404-out {
+        margin: 10px;
+        box-shadow: none;
+    }
+    .list-404-out {
+        display: block;
+    }
+    .list-404-out a {
+        display: inline;
+    }
+    .list-404-out:after{
+        content: none;
+    }
+    .list-404-in {
+        
+        margin: 0px;
+    }
+    .out-list-404 {
+        margin: 0px;
+        display: block;
+    }
+    .clockbox {
+        display: none;
+    }
+    .post_header#error {
+        display: none;
+    }
+    .recent-posts-2 h4 {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1100px) {
+.list-404-out:after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: #323232;
+    z-index: -1;
+    border-radius: 4px;
+}
 }
 
 
@@ -2844,21 +2897,12 @@ opacity: 0.75;
     width: 100px;
 }*/
 
-#recent-posts-2 li a:hover, #recent-posts-2 div a:hover {
+/*#recent-posts-2 li a:hover, #recent-posts-2 div a:hover {
     font-weight: bold;
-}
+}*/
 
-.list-404-out:after {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background: #323232;
-    z-index: -1;
-    border-radius: 4px;
-}
+
+
 
 #recent-posts-2 h4 {
     color: #555;

@@ -84,7 +84,7 @@
     <p><?php echo $casemessage; ?></p>
     <div class="post_divider"></div>
     <div id="center-center">
-      <p style="text-align: center; margin-top: 10px;"><b style="text-align: center;">Try searching for something different, exploring the story categories above, or visiting our most recent posts below.</b></p>
+      <p style="text-align: center;">Try searching for something different, exploring the story categories above, or visiting our most recent posts below.</p>
       <p style="text-align: center;"></p>
       
     </div> <!--center-center -->

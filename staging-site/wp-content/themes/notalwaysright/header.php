@@ -285,7 +285,7 @@ jQuery(document).ready(function() {
     <!--// Main Content Container //-->
     <div class="container" id="main_content">
        <!--// margin-left: 0px;  //-->
-      <?php if (is_page('about') || is_page('help') || (!isset($_SERVER['HTTP_REFERER'])) ) : ?>
+      <?php if (is_page('about') || is_page('help')  ) : ?>
         <div class="row">
         <div class="about8"> <!--// margin-left: -10px; //-->
           <div class="container_content">
