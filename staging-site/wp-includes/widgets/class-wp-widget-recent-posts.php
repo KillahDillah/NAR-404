@@ -99,7 +99,7 @@ class WP_Widget_Recent_Posts extends WP_Widget {
 							<!-- <div id="meta_comments_wrapper"> -->
 								<div id="meta_comments">
 										<div class="comments_count">
-											<div class="disqus-comment-count" data-disqus-url="<?php echo get_permalink($post->ID); ?>#disqus_thread">0</div>
+											<div class="disqus-comment-count" data-disqus-url="<?php echo get_permalink($post->ID); ?>#disqus_thread">1</div>
 											<span class="comments_text">COMMENTS </span>
 										</div>
 									<!-- </a> -->
